@@ -37,10 +37,12 @@ def get_channel_statistics(username = None, channel_id = None):
     else:
         return "Provide a username or channel ID."
     
-# username = "github"
-# response = get_channel_statistics(username=username)
+# request for channel name github
+username = "github"
+response = get_channel_statistics(username=username)
+print(json.dumps(response, sort_keys=True, indent=4))
 
-channel_id="UCpRXjQ_FgRfAqP6uIsA7UEQ"
+# request for github channel id
+channel_id="UC7c3Kb6jYCRj4JOHHZTxKsQ"
 response = get_channel_statistics(channel_id=channel_id)
-
 print(json.dumps(response, sort_keys=True, indent=4))
